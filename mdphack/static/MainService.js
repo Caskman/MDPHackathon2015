@@ -3,7 +3,7 @@ app.service('MainService', ['$http', '$q', function ($http, $q) {
     var data = {}; // private data; only accessible by getter functions; can't be set
 
     functions.getLatestAppointments = function (callback) {
-        return $http.get('/GetLatestAppointments/', {
+        return $http.get('/appointments', {
             cache: false
         }).success(callback);
     }

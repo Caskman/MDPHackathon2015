@@ -28,16 +28,23 @@
 	      </div>
 	    </nav>
 
-	    <div class="container" ng-controller="MainController">
-	    	<div class="" ng-repeat="appt in latestAppointments">
-	    		<div class="inline-block">[[appt.PatientName]]</div>
-	    		<div class="inline-block">[[appt.Time]]</div>
-	    		<div ng-click="sendFollowUp()">Send Follow Up Email</div>
-	    	</div>
-	    </div><!-- /.container -->
+	    <div ng-controller="MainController">
+		    <div class="container">
+		    	<div class="" ng-repeat="appt in latestAppointments">
+		    		<div class="inline-block">[[appt.PatientName]]</div>
+		    		<div class="inline-block">[[appt.Time | date: 'medium']]</div>
+		    		<div class="btn btn-default" ng-click="showEmail(appt.ID)">Send Follow Up Email</div>
+		    		<div ng-show="Selections.selectedAppt == appt.ID">
+					    <div>To: [[appt.Name]]</div>
+					    <h2>Subject</h2>
+					    <div>Blah blha blah</div>
+		    		</div>
+		    	</div>
+		    </div><!-- /.container -->
+	    </div>
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='app.js')}}"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='MainService.js')}}"></script>
