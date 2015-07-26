@@ -73,7 +73,7 @@ button:hover {
 }
 
 @-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 
@@ -85,4 +85,13 @@ button:hover {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
+}
+
+.slide-from-left.ng-hide {
+    transition: 1s;
+    left: -5000;
+}
+.slide-from-left.ng-show {
+    transition: 1s;
+    left: 0;
 }

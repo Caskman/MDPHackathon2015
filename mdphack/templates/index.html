@@ -32,7 +32,7 @@
 				<h3>Manage patient communication</h3>
 
 	    <div ng-controller="MainController">
-		    <div class="container" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
+		    <div class="container slide-from-left" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
 		    	<div class="btn btn-default" ng-click="showAppointments()">Back</div>
 		    	<div class="email-box">
 			    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
@@ -63,6 +63,7 @@
 
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.js"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='app.js')}}"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='MainService.js')}}"></script>
 		<script type="text/javascript" src="{{url_for('static', filename='MainController.js')}}"></script>
