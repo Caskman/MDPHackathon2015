@@ -6,4 +6,4 @@ var app = angular.module('MDPHack2015', [], function($interpolateProvider) {
 
 setTimeout(function() {
     document.querySelector('#dino').style.opacity = 1;
-}, 2500);
+}, 15000);
