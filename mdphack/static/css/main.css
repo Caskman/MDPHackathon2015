@@ -1,0 +1,35 @@
+body {
+    background: #ddd;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #aaa;
+    box-shadow: 0px 10px 40px rgba(150, 150, 150, 0.6);
+}
+
+.patient-box {
+    background: rgba(242, 245, 245, 1);
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #e5e5e6;
+}
+
+button {
+    margin: 10px 0;
+    background-color: #e2f4f9;
+}
+
+button:hover {
+    background: #56bfdd;
+    color: #ffffff;
+}
+
+.email-box {
+    padding: 30px;
+    border: 1px solid #e5e5e6;
+    background: rgba(252, 252, 252, 1);
+}
