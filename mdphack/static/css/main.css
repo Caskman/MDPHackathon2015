@@ -119,5 +119,5 @@ button:hover {
     display: block;
     margin: auto;
     opacity: 0;
-    transition: 25s opacity ease-in;
+    transition: 25s all ease-in;
 }
