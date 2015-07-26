@@ -19,7 +19,7 @@ def index():
 @app.route('/appointments')
 def get_latest_appointments():
 	json = {"data": data["Appointments"]}
-	print str(json)
+	print(str(json))
 	return flask.jsonify(**json)
 
 if __name__ == '__main__':
