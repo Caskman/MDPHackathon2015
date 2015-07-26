@@ -33,7 +33,20 @@
 		    	<div class="btn btn-default" ng-click="showAppointments()">Back</div>
 		    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
 		    	<h3>Subject</h3>
-		    </div>
+		    	<div>Blah blah blah</div>
+		    	<div class="btn btn-primary" ng-click="sendEmail($scope.Selections.selectedAppt)" ng-show="!sendingEmail && !emailSent">Send</div>
+		    	<!-- <div class="spinner" ng-show="sendingEmail" ng-hide="!sendingEmail && !emailSent"></div> -->
+				<div class="spinner" ng-show="sendingEmail">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
+				</div>
+				<div class="succesIcon" ng-if="emailSent">
+					Success!
+				</div>
+			</div>
 		    <div class="container" ng-show="Selections.Mode == 'APPOINTMENTS'">
 		    	<div class="" ng-repeat="appt in latestAppointments">
 		    		<div class="inline-block">[[appt.PatientName]]</div>
