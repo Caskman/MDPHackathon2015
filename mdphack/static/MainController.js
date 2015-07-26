@@ -2,6 +2,7 @@ app.controller("MainController", ['$scope', 'MainService', '$q', function($scope
 
 	$scope.latestAppointments = null;
 	$scope.Selections = {
+		Mode: 'APPOINTMENTS',
 		selectedAppt: -1
 	};
 
@@ -14,8 +15,13 @@ app.controller("MainController", ['$scope', 'MainService', '$q', function($scope
 
 	});
 
-	$scope.showEmail = function(id) {
-		$scope.Selections.selectedAppt = (id == $scope.Selections.selectedAppt ) ? -1 : id ;
+	$scope.showEmail = function(appt) {
+		$scope.Selections.selectedAppt = appt;
+		$scope.Selections.Mode = 'EMAIL_PREVIEW';
+	}
+
+	$scope.showAppointments = function() {
+		$scope.Selections.Mode = 'APPOINTMENTS';
 	}
 
 }]);
