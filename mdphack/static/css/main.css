@@ -16,6 +16,13 @@ body {
     padding: 10px;
     display: inline-block;
     border: 1px solid #e5e5e6;
+    cursor: pointer;
+}
+
+.patient-box:hover {
+    background: rgba(230, 240, 240, 1);
+    box-shadow: 0px 2px 5px rgba(50, 100, 100, 0.3);
+    border: 1px solid #0184bc;
 }
 
 button {
@@ -34,6 +41,10 @@ button:hover {
     background: rgba(252, 252, 252, 1);
 }
 
+.send-container {
+    margin: 20px;
+}
+
 .spinner {
   /*margin: 100px auto;*/
   width: 50px;
@@ -42,12 +53,13 @@ button:hover {
   font-size: 10px;
 }
 
+
 .spinner > div {
-  background-color: blue;
+  background-color: #56bfdd;
   height: 100%;
   width: 6px;
   display: inline-block;
-  
+
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
@@ -78,15 +90,16 @@ button:hover {
 }
 
 @keyframes sk-stretchdelay {
-  0%, 40%, 100% { 
+  0%, 40%, 100% {
     transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
-  }  20% { 
+  }  20% {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
 }
 
+<<<<<<< HEAD
 .slide-from-left.ng-hide {
     transition: 1s;
     left: -5000;
@@ -94,4 +107,20 @@ button:hover {
 .slide-from-left.ng-show {
     transition: 1s;
     left: 0;
+=======
+.send {
+    background: #56bfdd;
+    color: #fff;
+    font-size: 20px;
+}
+.send:hover {
+    background: #3c5a63;
+}
+
+#dino {
+    display: block;
+    margin: auto;
+    opacity: 0;
+    transition: 25s opacity ease-in;
+>>>>>>> c4b24a0483ac455a257c516732e65f08cacc3c8b
 }

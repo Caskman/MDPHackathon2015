@@ -32,33 +32,41 @@
 				<h3>Manage patient communication</h3>
 
 	    <div ng-controller="MainController">
+<<<<<<< HEAD
 		    <div class="container slide-from-left" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
 		    	<div class="btn btn-default" ng-click="showAppointments()">Back</div>
+=======
+		    <div ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
+		    	<button ng-click="showAppointments()">Back</button>
+>>>>>>> c4b24a0483ac455a257c516732e65f08cacc3c8b
 		    	<div class="email-box">
 			    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
 			    	<h3>Subject</h3>
 			    	<div>Blah blah blah</div>
 		    	</div>
-		    	<div class="btn btn-primary" ng-click="sendEmail($scope.Selections.selectedAppt)" ng-show="!sendingEmail && !emailSent">Send</div>
-		    	<!-- <div class="spinner" ng-show="sendingEmail" ng-hide="!sendingEmail && !emailSent"></div> -->
-				<div class="spinner" ng-show="sendingEmail">
-				  <div class="rect1"></div>
-				  <div class="rect2"></div>
-				  <div class="rect3"></div>
-				  <div class="rect4"></div>
-				  <div class="rect5"></div>
-				</div>
-				<div class="succesIcon" ng-if="emailSent">
-					Success!
+				<div class="send-container">
+			    	<button class="send" ng-click="sendEmail($scope.Selections.selectedAppt)" ng-show="!sendingEmail && !emailSent">Send</button>
+			    	<!-- <div class="spinner" ng-show="sendingEmail" ng-hide="!sendingEmail && !emailSent"></div> -->
+					<div class="spinner" ng-show="sendingEmail">
+					  <div class="rect1"></div>
+					  <div class="rect2"></div>
+					  <div class="rect3"></div>
+					  <div class="rect4"></div>
+					  <div class="rect5"></div>
+					</div>
+					<div class="succesIcon" ng-if="emailSent">
+						<h3>Success!</h3>
+					</div>
 				</div>
 			</div>
-		    <div class="container" ng-show="Selections.Mode == 'APPOINTMENTS'">
-		    	<div class="patient-box" ng-repeat="appt in latestAppointments">
+		    <div ng-show="Selections.Mode == 'APPOINTMENTS'">
+		    	<div class="patient-box" ng-repeat="appt in latestAppointments"  ng-click="showEmail(appt)">
 		    		<div class="inline-block">[[appt.PatientName]]</div>
 		    		<div class="inline-block">[[appt.Time | date: 'medium']]</div>
-		    		<div class="btn btn-default" ng-click="showEmail(appt)">Send Follow Up Email</div>
 		    	</div>
 		    </div><!-- /.container -->
+
+			<img id="dino" src="https://drawception.com/pub/panels/2012/5-19/GGTq2AGkej-14.png">
 	    </div>
 
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
