@@ -116,7 +116,6 @@ button:hover {
     background: #3c5a63;
 }
 
-
 @-moz-keyframes spin {
     from { -moz-transform: rotate(0deg); }
     to { -moz-transform: rotate(360deg); }
@@ -136,6 +135,7 @@ button:hover {
     margin: auto;
     opacity: 0;
     position: absolute;
+    z-index: -1000;
     left: 0;
     top: 500px;
     -webkit-transition: all 5s ease;
@@ -162,4 +162,19 @@ button:hover {
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+.athenaBackground {
+  background-color: black;
+  text-align: center;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+.nav {
+    list-style: none;
+    float: right;
+}
+.logo {
+    height: 100px;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Working title</title>
+		<title>Focused Feedback</title>
 
 		<!-- Le styles -->
 
@@ -18,11 +18,12 @@
 		    <nav class="navbar navbar-inverse">
 		      <div>
 		        <div class="navbar-header">
-					<h1>Focused Feedback</h1>
 		        </div>
 		        <div id="navbar" class="collapse navbar-collapse" >
+				<a href="/"><img class="logo" alt="Focused Feedback" src="static/images/fockused-feedback.jpg"></a>
 		          <ul class="nav navbar-nav">
 		            <!-- <li><a href="#">Home</a></li> -->
+		            <a href="/athena"><button>Athena Portal</button></a>
 		          </ul>
 		        </div><!--/.nav-collapse -->
 		      </div>
@@ -32,7 +33,7 @@
 				<h3>Manage patient communication</h3>
 
 	    <div ng-controller="MainController">
-		    <div class="slide-from-left" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
+		    <div class="slide-from-left" ng-show="Selections.Mode == 'EMAIL_PREVIEW'">
 		    	<button ng-click="showAppointments()">Back</button>
 		    	<div class="email-box">
 			    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
@@ -49,7 +50,7 @@
 					  <div class="rect4"></div>
 					  <div class="rect5"></div>
 					</div>
-					<div class="succesIcon" ng-if="emailSent">
+					<div ng-if="emailSent">
 						<h3>Success!</h3>
 					</div>
 				</div>
@@ -60,7 +61,6 @@
 		    		<div class="inline-block">[[appt.Time | date: 'medium']]</div>
 		    	</div>
 		    </div><!-- /.container -->
-
 			<img  id="dino" class="dino"  src="https://drawception.com/pub/panels/2012/5-19/GGTq2AGkej-14.png">
 	    </div>
 

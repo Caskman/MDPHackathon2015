@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Working title</title>
+
+		<!-- Le styles -->
+
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+
+	</head>
+	<body ng-app="MDPHack2015" class="athenaBackground">
+
+
+		<div ng-controller="AthenaController">
+			<img ng-repeat="img in imgs" src="static/imgs/[[img.src]]" ng-show="Selections.img == img.id" ng-click="incImg()"/>
+		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='app.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='MainService.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='MainController.js')}}"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='AthenaController.js')}}"></script>
+	</body>
+</html>

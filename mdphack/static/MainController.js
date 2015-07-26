@@ -13,8 +13,7 @@ app.controller("MainController", ['$scope', 'MainService', '$q', '$timeout', fun
 			$scope.latestAppointments = appointments.data.reverse();
 		})
 	]).then(function() {
-
-
+		
 	});
 
 	$scope.showEmail = function(appt) {
@@ -36,7 +35,7 @@ app.controller("MainController", ['$scope', 'MainService', '$q', '$timeout', fun
 				$scope.sendingEmail = false;
 				$scope.emailSent = true;
 				$('.succesIcon polyline').show().css('-webkit-animation-play-state', 'running').delay(1000);
-			}, 5000);
+			}, Math.random() * (5000) + 2000);
 		}
 	}
 
