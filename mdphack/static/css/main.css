@@ -106,6 +106,7 @@ button:hover {
 .slide-from-left.ng-show {
     transition: 1s;
     left: 0;
+}
 .send {
     background: #56bfdd;
     color: #fff;
@@ -115,9 +116,50 @@ button:hover {
     background: #3c5a63;
 }
 
-#dino {
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.dino {
+    border: 10px solid red;
     display: block;
     margin: auto;
     opacity: 0;
-    transition: 25s all ease-in;
+    position: absolute;
+    left: 0;
+    top: 500px;
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    -ms-transition: all 5s ease;
+    transition: all 5s ease;
+    position: absolute;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }

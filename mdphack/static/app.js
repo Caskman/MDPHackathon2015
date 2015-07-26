@@ -5,6 +5,18 @@ var app = angular.module('MDPHack2015', ['ngAnimate'], function($interpolateProv
 });
 
 setTimeout(function() {
-    document.querySelector('#dino').style.opacity = 1;
-    document.querySelector('#dino').style.width = "10000px";
-}, 35000);
+    document.querySelector('#dino').style.opacity = 0.2;
+    document.querySelector('#dino').style['left'] = "3000px";
+    setTimeout(function() {
+        document.querySelector('#dino').style.opacity = 0;
+        document.querySelector('#dino').style['left'] = "000px";
+        setTimeout(function() {
+            document.querySelector('#dino').style.opacity = 0.2;
+            document.querySelector('#dino').style['left'] = "3000px";
+            setTimeout(function() {
+                document.querySelector('#dino').style.opacity = 0;
+                document.querySelector('#dino').style['left'] = "000px";
+            }, 10000)
+        }, 10000)
+    }, 10000)
+}, 10000);
