@@ -98,14 +98,14 @@ button:hover {
     -webkit-transform: scaleY(1.0);
   }
 }
-
-.slide-from-left.ng-hide {
-    transition: 1s;
-    left: -5000;
+.slide-from-left {
+  transition: 1s;
+  /*left: 0px;*/
 }
-.slide-from-left.ng-show {
-    transition: 1s;
-    left: 0;
+.slide-from-left.ng-hide {
+    left: -5000px;
+}
+
 .send {
     background: #56bfdd;
     color: #fff;
@@ -119,5 +119,5 @@ button:hover {
     display: block;
     margin: auto;
     opacity: 0;
-    transition: 25s all ease-in;
+    transition: 25s opacity ease-in;
 }
