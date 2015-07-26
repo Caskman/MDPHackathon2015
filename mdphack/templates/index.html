@@ -33,16 +33,16 @@
 	    </nav>
 
 	    <div ng-controller="MainController">
-		    <div class="container">
+		    <div class="container" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
+		    	<div class="btn btn-default" ng-click="showAppointments()">Back</div>
+		    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
+		    	<h3>Subject</h3>
+		    </div>
+		    <div class="container" ng-show="Selections.Mode == 'APPOINTMENTS'">
 		    	<div class="" ng-repeat="appt in latestAppointments">
 		    		<div class="inline-block">[[appt.PatientName]]</div>
 		    		<div class="inline-block">[[appt.Time | date: 'medium']]</div>
-		    		<div class="btn btn-default" ng-click="showEmail(appt.ID)">Send Follow Up Email</div>
-		    		<div ng-show="Selections.selectedAppt == appt.ID">
-					    <div>To: [[appt.Name]]</div>
-					    <h2>Subject</h2>
-					    <div>Blah blha blah</div>
-		    		</div>
+		    		<div class="btn btn-default" ng-click="showEmail(appt)">Send Follow Up Email</div>
 		    	</div>
 		    </div><!-- /.container -->
 	    </div>
