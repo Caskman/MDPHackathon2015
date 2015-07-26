@@ -22,6 +22,10 @@ def get_latest_appointments():
 	print(str(json))
 	return flask.jsonify(**json)
 
+@app.route('/athena')
+def athena_demo():
+	return render_template('athena_demo.html')
+
 if __name__ == '__main__':
 	app.debug = True
 	app.run(host='0.0.0.0')

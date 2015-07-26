@@ -98,13 +98,6 @@ button:hover {
     -webkit-transform: scaleY(1.0);
   }
 }
-.slide-from-left {
-  transition: 1s;
-  /*left: 0px;*/
-}
-.slide-from-left.ng-hide {
-    left: -5000px;
-}
 
 .send {
     background: #56bfdd;
@@ -115,9 +108,7 @@ button:hover {
     background: #3c5a63;
 }
 
-#dino {
-    display: block;
-    margin: auto;
-    opacity: 0;
-    transition: 25s opacity ease-in;
+.athenaBackground {
+  background-color: black;
+  text-align: center;
 }
