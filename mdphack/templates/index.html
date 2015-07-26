@@ -32,13 +32,8 @@
 				<h3>Manage patient communication</h3>
 
 	    <div ng-controller="MainController">
-<<<<<<< HEAD
-		    <div class="container slide-from-left" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
-		    	<div class="btn btn-default" ng-click="showAppointments()">Back</div>
-=======
-		    <div ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
+		    <div class="slide-from-left" ng-if="Selections.Mode == 'EMAIL_PREVIEW'">
 		    	<button ng-click="showAppointments()">Back</button>
->>>>>>> c4b24a0483ac455a257c516732e65f08cacc3c8b
 		    	<div class="email-box">
 			    	<div>To: [[Selections.selectedAppt.PatientName]]</div>
 			    	<h3>Subject</h3>

@@ -99,7 +99,6 @@ button:hover {
   }
 }
 
-<<<<<<< HEAD
 .slide-from-left.ng-hide {
     transition: 1s;
     left: -5000;
@@ -107,7 +106,6 @@ button:hover {
 .slide-from-left.ng-show {
     transition: 1s;
     left: 0;
-=======
 .send {
     background: #56bfdd;
     color: #fff;
@@ -122,5 +120,4 @@ button:hover {
     margin: auto;
     opacity: 0;
     transition: 25s opacity ease-in;
->>>>>>> c4b24a0483ac455a257c516732e65f08cacc3c8b
 }
